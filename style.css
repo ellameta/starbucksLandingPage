@@ -1,0 +1,349 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+}
+
+header .logo {
+    position: relative;
+    width: 110px;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+}
+
+header ul li {
+    list-style: none;
+}
+
+header ul li a {
+    display: inline-block;
+    color: #333;
+    cursor: pointer;
+    font-weight: 400;
+    margin-left: 40px;
+    text-decoration: none;
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content .textBox {
+    position: relative;
+    width: 550px;
+}
+
+.content .textBox h2 {
+    color: #333;
+    font-size: 3.5em;
+    line-height: 1.4em;
+    font-weight: 600;
+}
+
+.content .textBox h2 span {
+    color: #017143;
+    font-size: 1.3em;
+    font-weight: 1000;
+}
+
+.content .textBox p {
+    color: #333;
+    font-size: 1.1em;
+}
+
+.content .textBox a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background: #017143;
+    color: #fff;
+    border-radius: 40px;
+    font-weight: 500px;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.content .imgBox {
+    width: 550px;
+    display: flex;
+    padding-right: 50px;
+    margin-top: 50px;
+    margin-left: 5%;
+}
+
+.content .imgBox img {
+    max-height: 590px;
+}
+
+/* Hoverable drinks below */
+.thumb {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    display: flex;
+}
+.thumb .img3 {
+    margin-bottom: 5px;
+}
+.thumb li {
+    list-style: none;
+    display: inline-block;
+    margin: 5px 20px;
+    cursor: pointer;
+    transition: 0.5s;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.thumb li:hover {
+    transform: translateY(-15px);
+}
+
+.thumb li img {
+    max-width: 55px;
+}
+
+/* Circle in background */
+.circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #017143;
+    clip-path: circle(600px at right 800px);
+}
+
+.sci {
+    position: absolute;
+    bottom: 40px;
+    left: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.sci li {
+    list-style: none;
+}
+
+.sci li a {
+    margin-left: 15px;
+    background: #222222;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: 0.2s ease-in-out;
+}
+
+.sci li a:hover {
+    background: #017143;
+}
+
+.sci li a img {
+    filter: invert(1);
+    transform: scale(0.5);
+}
+
+
+/* QUERIES (Making the site responsive */ 
+
+@media (max-width: 991px) {
+
+    .content .textBox {
+        margin-left: -2%;
+    }
+    .content .textBox h2 {
+        font-size: 2.2em;
+    }
+
+    .content .textBox p {
+        font-size: 0.9em;
+    }
+    .content .imgBox img {
+        width: 340px;
+        height: auto;    
+    }
+
+    section header {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    .circle {
+        clip-path: circle(500px at right 900px);
+    }
+
+    .sci {
+        margin-left: -10%;
+    }
+    .sci li a {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 770px){
+
+    .sci li a {
+        width: 25px;
+        height: 25px;
+        padding: 5px 5px;
+    }
+    .circle {
+        clip-path: circle(450px at right 900px);
+    }
+    .content .textBox {
+        margin-left: -10%;
+    }
+    .content .textBox h2 {
+        font-size: 2em;
+    }
+
+    .content .textBox p {
+        font-size: 0.8em;
+    }
+    .content .imgBox img {
+        width: 300px;
+        height: auto;    
+    }
+
+    @media (max-width: 600px) {
+        .content{
+            align-items: center;
+            justify-content: center;
+        }
+        .circle {
+            clip-path: circle(350px at right 800px);
+        } 
+    
+        .content .textBox h2 {
+            font-size: 1.5em;
+        }
+    
+        .content .textBox p {
+            font-size: 0.7em;
+        }
+
+        .content .imgBox {
+            align-items: center;
+            justify-content: center;
+        }
+        .content .imgBox img {
+            width: 250px;
+            align-items: center;
+            height: auto;    
+        }
+        section header {
+            height: 80px;
+        }
+
+        section {
+            height: 700px;
+        }
+
+        section header ul {
+            font-size: 0.8em;
+            flex-direction: row;
+            margin-bottom: 10px;
+        }
+
+
+
+        @media (max-width: 560px) {
+            section {
+                height: 650px;
+            }
+
+            section header ul {
+                font-size: 0.65em;
+                flex-direction: row;
+                margin-bottom: 5px;
+            }
+
+            section header {
+                font-size: 0.75em;
+            }
+            .content .imgBox img {
+                width: 200px;
+                height: auto;    
+            } 
+            .content .textBox h2 {
+                font-size: 1em;
+            }
+
+            .content .textBox {
+                margin-left: 0;
+                margin-right: 2%;
+            }
+            .content .textBox a {
+                font-size: 0.7em;
+            }
+    
+            .content .textBox p {
+                font-size: 0.5em;
+                max-width: 400px;
+            }
+
+            .thumb {
+                bottom: 45px;
+            }
+            .thumb li img {
+                max-width: 30px;
+                bottom: 0;
+                left: 0;
+            }
+            .circle {
+                clip-path: circle(400px at right 900px);
+            } 
+
+            .sci {
+                margin-left: -20%;
+                bottom: 30px;
+            }
+        }
+        @media (max-width: 559px) {
+            .content .textBox a {
+                font-size: 0.6em;
+            }
+            .content .textBox {
+                margin-left: 10px;
+            }
+
+        }
+    }
+}
