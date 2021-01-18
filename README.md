@@ -5,4 +5,5 @@
 <li>CSS3</li>
 <li>JavaScript</li>
 
-![alt text](https://ellameta.github.io/starbucksLandingPage/)
+![alt text](https://raw.githubusercontent.com/ellameta/starbucksLandingPage/master/starbucks.png)
+
