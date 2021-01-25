@@ -5,5 +5,7 @@
 <li>CSS3</li>
 <li>JavaScript</li>
 
+A quick view of what the project looks like! 
+
 ![alt text](https://raw.githubusercontent.com/ellameta/starbucksLandingPage/master/starbucks.png)
 
